@@ -3,12 +3,11 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
-import Users from "./pages/users";
+import Users from "./pages/Users";
 import Main from "./pages/Main";
 import Pricing from "./pages/Pricing";
 import Service from "./pages/Service";
 import Contect from "./pages/Contect";
-
 
 function App() {
   const router = createBrowserRouter([
@@ -42,14 +41,13 @@ function App() {
     },
     {
       path: "/pricing",
-      element: <Pricing/>,
+      element: <Pricing />,
     },
     {
       path: "/contect",
       element: <Contect />,
     },
   ]);
-  
 
   return <RouterProvider router={router} />;
 }
