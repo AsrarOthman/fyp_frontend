@@ -7,11 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { HOST } from "../api";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-
-
+import Token from "../components/Token";
+import Logout from "../components/Logout";
 
 const Main = () => {
-
   const [jwt, setJwt] = useLocalStorage("token", "");
   const [isAdmin, setAdmin] = useState(null);
   const [DataFilter, setDataFilter] = useState(null);
@@ -21,7 +20,13 @@ const Main = () => {
   const handleNavigateService = () => {
     navigate("/service");
   };
-
+  const handleNavigateToLogin = () => {
+    navigate("/");
+  };
+  const handleLogout = (message) => {
+    <Logout />;
+    handleNavigateToLogin();
+  };
   const fetchUserAccount = async () => {
     try {
       const response = await axios.get(`${HOST}/private`, {
@@ -38,7 +43,6 @@ const Main = () => {
     }
   };
 
-  const handleLogoutOut = () => setJwt("");
 
   useEffect(() => {
     fetchUserAccount();
@@ -51,31 +55,31 @@ const Main = () => {
       setAdmin(false);
     }
   }, [DataFilter]);
-const AdminControl = () => {
-  return (
-    <div style={{ display: "inline", marginLeft: "1rem" }}>
-      <span
-        style={{
-          textDecoration: "underline",
-          color: "blue",
-          cursor: "pointer",
-        }}
-      >
-        Edit
-      </span>
-      <span
-        style={{
-          textDecoration: "underline",
-          marginLeft: "0.5rem",
-          color: "red",
-          cursor: "pointer",
-        }}
-      >
-        Delete
-      </span>
-    </div>
-  );
-};
+  const AdminControl = () => {
+    return (
+      <div style={{ display: "inline", marginLeft: "1rem" }}>
+        <span
+          style={{
+            textDecoration: "underline",
+            color: "blue",
+            cursor: "pointer",
+          }}
+        >
+          Edit
+        </span>
+        <span
+          style={{
+            textDecoration: "underline",
+            marginLeft: "0.5rem",
+            color: "red",
+            cursor: "pointer",
+          }}
+        >
+          Delete
+        </span>
+      </div>
+    );
+  };
   return (
     <div className="mother">
       <div
@@ -93,7 +97,7 @@ const AdminControl = () => {
             {DataFilter?.username || "no data"}
           </h4>
 
-          <button className="b-nor" onClick={handleLogoutOut}>
+          <button className="b-nor" onClick={handleLogout}>
             Logout
           </button>
         </div>
@@ -122,10 +126,9 @@ const AdminControl = () => {
         </div>
       </div> */}
       <div className="bar-1">
-        <Nav/>
+        <Nav />
         <p className="txt-1">Invoice Generator</p>
         <p style={{ fontStyle: "italic" }}>
-        
           make your business easy and faster
         </p>
       </div>
@@ -155,12 +158,10 @@ const AdminControl = () => {
         </div>
       </div>
       <div className="bar-3 bar-3x">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
 };
-
-
 
 export default Main;

@@ -44,11 +44,11 @@ const Home = () => {
               <span>No Code</span>
             </div>
             <div className="back-face">
-              <span>Web Design</span>
+              <span>No Code</span>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in
-                deleniti vitae beatae veritatis aliquid porro perspiciatis
-                dolores impedit ad.
+                Our system doesn't require coding. Our system can generate
+                ready-to-use invoices that can be downloaded in PDF format or
+                sent directly to customers via email..
               </p>
             </div>
           </div>
@@ -60,11 +60,10 @@ const Home = () => {
               <span>Easy to Generate</span>
             </div>
             <div className="back-face">
-              <span>Advertising</span>
+              <span>Easy to Generate</span>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in
-                deleniti vitae beatae veritatis aliquid porro perspiciatis
-                dolores impedit ad.
+                Users can easily generate invoices without the need for complex
+                technical skills or coding knowledge.
               </p>
             </div>
           </div>
@@ -73,14 +72,14 @@ const Home = () => {
               <div className="icon">
                 <i className="fas fa-rocket"></i>
               </div>
-              <span>Run your business Fast </span>
+              <span>tRun your business Fast </span>
             </div>
             <div className="back-face">
-              <span>Game Design</span>
+              <span>Run your business Fast</span>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in
-                deleniti vitae beatae veritatis aliquid porro perspiciatis
-                dolores impedit ad.
+                Our system provides user-friendly interfaces and intuitive
+                workflows, making it easy for you and your team to navigate and
+                utilize its features.
               </p>
             </div>
           </div>
@@ -88,7 +87,7 @@ const Home = () => {
         <div className="home-info-box">
           <div className="home-info">
             <p>
-              With our "Easy and Fast Invoice Maker" software, you can
+              With our "Easy and Fast Invoice Generator" software, you can
               effortlessly create high-quality invoices in no time, eliminating
               the need for hours of manual work or struggling with the
               complexities of invoice formatting.

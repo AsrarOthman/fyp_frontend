@@ -3,8 +3,19 @@ import Logo from "../components/Logo";
 import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Logout from "../components/Logout";
+import Token from "../components/Token";
 
-const Service = () => {
+const Pricing = () => {
+  <Token />;
+  const navigate = useNavigate();
+  const handleNavigateSetting = () => navigate("/setting");
+  const handleNavigateLogout = () => navigate("/");
+  const handleLogout = (message) => {
+    <Logout />;
+    handleNavigateLogout(message);
+  };
+
   return (
     <div className="mother">
       <div className="header-main Fs-main">
@@ -16,10 +27,7 @@ const Service = () => {
           >
             Setting
           </button>
-          <button
-            className="b-nor"
-            onClick={() => handleNavigateLogout("Logout")}
-          >
+          <button className="b-nor" onClick={() => handleLogout("Logout")}>
             Logout
           </button>
         </div>
@@ -83,9 +91,8 @@ const Service = () => {
                   COMING SOON
                 </button>
                 <h4>Quotation Generator</h4>
-                With this, you can generate quotes quickly
-                and easily. You no longer need to spend a long time creating
-                manual quotes.
+                With this, you can generate quotes quickly and easily. You no
+                longer need to spend a long time creating manual quotes.
               </p>
             </div>
             <div className="bar-2-1A b-txt2">
@@ -112,4 +119,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Pricing;

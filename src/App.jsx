@@ -8,6 +8,7 @@ import Main from "./pages/Main";
 import Pricing from "./pages/Pricing";
 import Service from "./pages/Service";
 import Contect from "./pages/Contect";
+import Setting from "./pages/Setting";
 
 function App() {
   const router = createBrowserRouter([
@@ -46,6 +47,10 @@ function App() {
     {
       path: "/contect",
       element: <Contect />,
+    },
+    {
+      path: "/setting",
+      element: <Setting />,
     },
   ]);
 
