@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import { HOST } from "../api";
 
 const Register = () => {
   const handleSubmit = async (event) => {
@@ -15,16 +15,12 @@ const Register = () => {
 
     // send formObject to api
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/register",
-        formObject
-      );
+      const response = await axios.post(`${HOST}/api/register`, formObject);
       console.log(response.data); // handle response from server
       alert("Registration successful!"); // display success message
     } catch (error) {
       console.error(error); // handle error from server
 
-      
       alert("Registration failed. Please try again."); // display error message
     }
   };
