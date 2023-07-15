@@ -35,15 +35,15 @@ const Home = () => {
         <h1>Welcome to AOT Invoice Generator</h1>
       </div>
       <div className="home-2">
-        <div class="wrapper">
-          <div class="box">
-            <div class="front-face">
-              <div class="icon">
-                <i class="fas fa-code"></i>
+        <div className="wrapper">
+          <div className="box">
+            <div className="front-face">
+              <div className="icon">
+                <i className="fas fa-code"></i>
               </div>
               <span>No Code</span>
             </div>
-            <div class="back-face">
+            <div className="back-face">
               <span>Web Design</span>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in
@@ -52,14 +52,14 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div class="box">
-            <div class="front-face">
-              <div class="icon">
-                <i class="fas fa-chart-line"></i>
+          <div className="box">
+            <div className="front-face">
+              <div className="icon">
+                <i className="fas fa-chart-line"></i>
               </div>
               <span>Easy to Generate</span>
             </div>
-            <div class="back-face">
+            <div className="back-face">
               <span>Advertising</span>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in
@@ -68,14 +68,14 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div class="box">
-            <div class="front-face">
-              <div class="icon">
-                <i class="fas fa-rocket"></i>
+          <div className="box">
+            <div className="front-face">
+              <div className="icon">
+                <i className="fas fa-rocket"></i>
               </div>
               <span>Run your business Fast </span>
             </div>
-            <div class="back-face">
+            <div className="back-face">
               <span>Game Design</span>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in
