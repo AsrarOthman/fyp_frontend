@@ -213,7 +213,7 @@ class InvoiceModal extends React.Component {
           <div className="pb-4 px-4">
             <Row>
               <Col md={6}>
-                <Button
+                {/* <Button
                   variant="primary"
                   className="d-block w-100"
                   onClick={savePDFToDatabase}
@@ -223,7 +223,7 @@ class InvoiceModal extends React.Component {
                     className="me-2"
                   />
                   Save PDF
-                </Button>
+                </Button> */}
               </Col>
               <Col md={6}>
                 <Button
