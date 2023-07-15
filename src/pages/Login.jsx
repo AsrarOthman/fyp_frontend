@@ -38,6 +38,7 @@ const Login = () => {
       })
       .catch(function (error) {
         console.error(error.response.data);
+        alert(" Failed. Please try again."); // display error message
       })
       .finally(function () {
         setLoading(false);
@@ -87,7 +88,11 @@ const Login = () => {
                 <label htmlFor="password">Password</label>
                 <input className="input-box" id="password" type="password" />
               </div>
-              <button type="submit" className="login-box mb" disabled={isLoading}>
+              <button
+                type="submit"
+                className="login-box mb"
+                disabled={isLoading}
+              >
                 {isLoading ? "Sending request..." : "Login"}
               </button>
               <Link
