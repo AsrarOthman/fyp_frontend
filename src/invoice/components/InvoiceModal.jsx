@@ -10,6 +10,8 @@ import { BiPaperPlane, BiCloudDownload } from "react-icons/bi";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import axios from "axios";
+import { HOST } from "../../api";
+
 // const { Buffer } = require("buffer");
 
 // function savePDFToDatabase(pdfData, filename) {
@@ -40,10 +42,7 @@ const savePDFToDatabase = async () => {
     console.log(filename);
     console.log(formData);
 
-    const response = await axios.post(
-      "http://localhost:8080/api/pdffile",
-      formData
-    );
+    const response = await axios.post(`${HOST}/api/pdffile`, formData);
     console.log(response.data); // handle response from server
     alert(" successful!"); // display success message
   } catch (error) {
