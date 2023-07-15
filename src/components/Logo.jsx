@@ -7,9 +7,9 @@ const Logo = () => {
   return (
     <h1
       onClick={handleNavigateHome}
-      style={{ fontSize: "18px", color: "white", cursor: "pointer" }}
+      style={{ fontSize: "24px", color: "white", cursor: "pointer" }}
     >
-      MyTechHouse
+      AO Technology
     </h1>
   );
 };

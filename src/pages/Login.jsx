@@ -11,7 +11,7 @@ const Login = () => {
   const [jwt, setJwt] = useLocalStorage("token", "");
   const navigate = useNavigate();
   const handleSucesssNavigation = () => {
-    navigate("/my-account");
+    navigate("/main");
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -44,80 +44,74 @@ const Login = () => {
       });
   };
   return (
-    <div style={{ height: "100vh", width: "100vw" }}>
-      <div
-        style={{
-          width: "100%",
-          height: "80px",
-          backgroundColor: "#171A21",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "1rem",
-        }}
-      >
+    <div className="mother">
+      <div className="header-main">
         <Logo />
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          height: "400px",
-          alignItems: "center",
-          padding: "3rem",
-        }}
-      >
-        <h1>Welcome back</h1>
-        <form
-          style={{ width: "100%", maxWidth: "400px" }}
-          onSubmit={handleSubmit}
-        >
+      <div className="b-log"></div>
+      <div className="log-3">
+        <div className="log-3-1">
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "0.5rem",
-              marginTop: "3rem",
+              height: "auto",
+              alignItems: "center",
+              padding: "3rem",
             }}
           >
-            <label htmlFor="identifier">Username / Email</label>
-            <input id="identifier" type="text" />
+            <h1 className="f-ig">AO Invoice Maker</h1>
+            <form
+              style={{ width: "100%", maxWidth: "400px" }}
+              onSubmit={handleSubmit}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                  marginTop: "3rem",
+                }}
+              >
+                <label htmlFor="identifier">Username / Email</label>
+                <input className=" input-box " id="identifier" type="text" />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                  marginTop: "1rem",
+                }}
+              >
+                <label htmlFor="password">Password</label>
+                <input className="input-box" id="password" type="password" />
+              </div>
+              <button type="submit" className="login-box mb" disabled={isLoading}>
+                {isLoading ? "Sending request..." : "Login"}
+              </button>
+              <Link
+                to="/register"
+                style={{
+                  marginTop: "1rem",
+                  display: "block",
+                  width: "100%",
+                  textAlign: "center",
+                }}
+              >
+                Register as new user
+              </Link>
+            </form>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.5rem",
-              marginTop: "1rem",
-            }}
-          >
-            <label htmlFor="password">Password</label>
-            <input id="password" type="password" />
-          </div>
-          <button
-            type="submit"
-            style={{
-              backgroundColor: "#171A21",
-              color: "white",
-              marginTop: "1rem",
-              width: "100%",
-            }}
-            disabled={isLoading}
-          >
-            {isLoading ? "Sending request..." : "Login"}
-          </button>
-          <Link
-            to="/register"
-            style={{
-              marginTop: "1rem",
-              display: "block",
-              width: "100%",
-              textAlign: "center",
-            }}
-          >
-            Register as new user
-          </Link>
-        </form>
+        </div>
+      </div>
+      <div className="footer">
+        <p style={{ fontSize: "24px", textAlign: "center" }}>
+          Powered by Ao Technology
+        </p>
+        <p style={{ fontSize: "12px", textAlign: "center" }}>
+          Copyright@2023AoTechology
+        </p>
       </div>
     </div>
   );

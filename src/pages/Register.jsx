@@ -3,6 +3,7 @@ import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
 const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -22,22 +23,14 @@ const Register = () => {
       alert("Registration successful!"); // display success message
     } catch (error) {
       console.error(error); // handle error from server
+
+      
       alert("Registration failed. Please try again."); // display error message
     }
   };
   return (
-    <div style={{ height: "100vh", width: "100vw" }}>
-      <div
-        style={{
-          width: "100%",
-          height: "80px",
-          backgroundColor: "#171A21",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "1rem",
-        }}
-      >
+    <div className="mother">
+      <div className="header-main">
         <Logo />
       </div>
       <div
@@ -49,7 +42,7 @@ const Register = () => {
           padding: "3rem",
         }}
       >
-        <h1>Join our tech club</h1>
+        <h1>Free Registration</h1>
         <form
           style={{ width: "100%", maxWidth: "400px" }}
           onSubmit={handleSubmit}
@@ -63,7 +56,7 @@ const Register = () => {
             }}
           >
             <label htmlFor="email">Email</label>
-            <input id="email" type="text" />
+            <input className="input-box" id="email" type="text" />
           </div>
           <div
             style={{
@@ -74,7 +67,7 @@ const Register = () => {
             }}
           >
             <label htmlFor="username">Username</label>
-            <input id="username" type="text" />
+            <input className="input-box" id="username" type="text" />
           </div>
           <div
             style={{
@@ -85,7 +78,7 @@ const Register = () => {
             }}
           >
             <label htmlFor="password">Password</label>
-            <input id="password" type="password" />
+            <input className="input-box" id="password" type="password" />
           </div>
           <div
             style={{
@@ -96,19 +89,16 @@ const Register = () => {
             }}
           >
             <label htmlFor="passwordConfirmation">Repeat password</label>
-            <input id="passwordConfirmation" type="password" />
+            <input
+              className="input-box"
+              id="passwordConfirmation"
+              type="password"
+            />
           </div>
-          <button
-            type="submit"
-            style={{
-              backgroundColor: "#171A21",
-              color: "white",
-              marginTop: "1rem",
-              width: "100%",
-            }}
-          >
+          <button className="login-box" type="submit">
             Register
           </button>
+
           <Link
             to="/login"
             style={{

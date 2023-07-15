@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  /* border: 2px solid blue; */
+}
+.b {
+  border: 2px solid red;
 }
 
-input {
+.inputs {
   all: unset;
   min-height: 30px;
   border-style: solid;
@@ -31,3 +37,408 @@ button {
   cursor: pointer;
   box-sizing: border-box;
 }
+
+/* Login CSS_________________________________ */
+
+.mother {
+  height: 100vh;
+  width: 100vw;
+}
+.header-main {
+  width: 100%;
+  height: 80px;
+  background-color: #518ecb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  /* border: 2px solid red; */
+}
+.log-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.log-3-1 {
+  width: 80%;
+  max-width: 400px;
+  height: 500px;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-radius: 7px;
+  border: 2px solid #518ecb;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.input-box {
+  all: unset;
+  min-height: 30px;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #dddee1;
+  background: #e9f0fd;
+}
+.b-nor {
+  border-color: #ffffff;
+  margin: 5px;
+  border-radius: 5px;
+  background: #518ecb;
+  color: #ffffff;
+}
+.mb {
+  margin-bottom: 0;
+}
+
+.login-box {
+  border-radius: 5px;
+  background: #518ecb;
+  color: #ffffff;
+  margin-top: 1rem;
+  width: 100%;
+  border-color: #518ecb;
+}
+
+.f-c {
+  text-align: center;
+}
+.b-log {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: #518ecb;
+  z-index: -1;
+}
+.footer {
+  width: 100%;
+  height: 200px;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Login CSS_________________________________ */
+/* Home CSS_____________________________________ */
+.home-1 {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+.home-2 {
+  height: auto;
+  min-height: 400px;
+  /* border: 2px solid rgb(229, 255, 0); */
+}
+
+.home-3 {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: end;
+  /* border: 2px solid red; */
+}
+.home-3-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: end;
+  align-items: center;
+  /* border: 2px solid blue; */
+  background-color: #333;
+}
+.home-3-2 {
+  margin-bottom: 40px;
+}
+.home-info-box {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+}
+.home-info {
+  margin: 30px;
+  /* border: 2px solid green; */
+  width: auto;
+  max-width: 700px;
+  text-align: center;
+}
+.wrapper {
+  display: grid;
+  /* margin: 50px 90px auto; */
+  /* grid-gap: 20px; */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 700px) {
+  .wrapper {
+    /* margin: 100px auto; */
+    grid-gap: 20px;
+  }
+}
+.wrapper .box {
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+}
+.wrapper .box .front-face {
+  height: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid #518ecb;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease;
+}
+.box .front-face .icon {
+  height: 80px;
+}
+.box .front-face .icon i {
+  font-size: 65px;
+}
+.box .front-face span,
+.box .back-face span {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .front-face .icon i,
+.box .front-face span {
+  background: linear-gradient(-135deg, #518ecb, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box .back-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  width: 100%;
+  padding: 30px;
+  color: #fff;
+  opacity: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background: linear-gradient(-135deg, #518ecb, #06145a);
+  transform: translateY(110px) rotateX(-90deg);
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+.box .back-face p {
+  margin-top: 10px;
+  text-align: justify;
+}
+.box:hover .back-face {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.box:hover .front-face {
+  opacity: 0;
+  transform: translateY(-110px) rotateX(90deg);
+}
+
+/* Social Media__________ */
+.fwrapper .button {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #dddddd;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.fwrapper .button:hover {
+  width: 160px;
+}
+.fwrapper .button .icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
+}
+.fwrapper .button:nth-child(1):hover .icon {
+  background: #4267b2;
+}
+.fwrapper .button:nth-child(2):hover .icon {
+  background: #1da1f2;
+}
+.fwrapper .button:nth-child(3):hover .icon {
+  background: #e1306c;
+}
+.fwrapper .button:nth-child(4):hover .icon {
+  background: #333;
+}
+.fwrapper .button:nth-child(5):hover .icon {
+  background: #ff0000;
+}
+.fwrapper .button .icon i {
+  font-size: 20px;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
+}
+.fwrapper .button:hover .icon i {
+  color: #fff;
+}
+.fwrapper .button span {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.fwrapper .button:nth-child(1) span {
+  color: #4267b2;
+}
+.fwrapper .button:nth-child(2) span {
+  color: #1da1f2;
+}
+.fwrapper .button:nth-child(3) span {
+  color: #e1306c;
+}
+.fwrapper .button:nth-child(4) span {
+  color: #333;
+}
+.fwrapper .button:nth-child(5) span {
+  color: #ff0000;
+}
+
+/* Home CSS_____________________________________ */
+/* MyAccount CSS_________________________________ */
+.macc-1 {
+  width: 100%;
+  height: 800px;
+  border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+}
+.bar-1 {
+  width: 100%;
+  height: 200px;
+  border: 2px solid #518ecb;
+  background-color: #ffffff;
+}
+.bg-c {
+  background-color: #e9f0fd;
+}
+.bar-2 {
+  width: 100%;
+  height: 500px;
+  border: 2px solid #518ecb;
+  display: flex;
+  background-color: #e9f0fd;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bar-2-1 {
+  width: 70%;
+  height: 300px;
+  /* border: 2px solid #518ecb; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bar-2-1A {
+  width: 20%;
+  height: 100%;
+  margin: 30px;
+  border-radius: 10px;
+  border: 2px solid #518ecb;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.bar-txt-box1 {
+  width: 70%;
+  height: auto;
+  /* border: 2px solid red; */
+}
+
+.bar-3 {
+  width: 100%;
+  height: 200px;
+  background-color: #333;
+}
+.bar-3x {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.txt-1 {
+  font-size: 42px;
+  margin-top: 30px;
+}
+.ft {
+  border: 2px solid red;
+}
+
+/* MyAccount CSS_________________________________ */
+/* InvoiceForm CSS_______________________________ */
+.input-invoice {
+  border: 2px solid rgb(172, 172, 172);
+  background-color: white;
+  border-radius: 0px;
+}
+.input-invoice-2 {
+  border: 2px solid rgb(172, 172, 172);
+  background-color: white;
+  border-radius: 0px;
+  height: 100px;
+  overflow: auto;
+}
+/* InvoiceForm CSS_______________________________ */
+/* EditableField CSS_____________________________ */
+.item-box {
+  border: 2px solid rgb(172, 172, 172);
+  background-color: white;
+  border-radius: 0px;
+}
+/* EditableField CSS_____________________________ */
+/* FreeUser CSS__________ */
+.Fs-head {
+  width: 100%;
+  height: 50px;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Fs-main {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* FreeUser CSS__________ */
+/* Pricing CSS____________ */
+.b-txt {
+  padding: 15px;
+  text-align: center; 
+}
+.b-txt2{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.premium{
+  background-color:gold;
+  color: black;
+}
+/* Pricing CSS____________ */

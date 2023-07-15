@@ -2,9 +2,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import MyAccount from "./pages/MyAccount";
 import Admin from "./pages/Admin";
 import Users from "./pages/users";
+import Main from "./pages/Main";
+import Pricing from "./pages/Pricing";
+import Service from "./pages/Service";
+import Contect from "./pages/Contect";
 
 
 function App() {
@@ -22,8 +25,8 @@ function App() {
       element: <Register />,
     },
     {
-      path: "/my-account",
-      element: <MyAccount />,
+      path: "/main",
+      element: <Main />,
     },
     {
       path: "/admin",
@@ -31,9 +34,22 @@ function App() {
     },
     {
       path: "/users",
-      element: <Users/>,
+      element: <Users />,
+    },
+    {
+      path: "/service",
+      element: <Service />,
+    },
+    {
+      path: "/pricing",
+      element: <Pricing/>,
+    },
+    {
+      path: "/contect",
+      element: <Contect />,
     },
   ]);
+  
 
   return <RouterProvider router={router} />;
 }
