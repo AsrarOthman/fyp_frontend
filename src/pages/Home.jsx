@@ -72,7 +72,7 @@ const Home = () => {
               <div className="icon">
                 <i className="fas fa-rocket"></i>
               </div>
-              <span>tRun your business Fast </span>
+              <span>Run your business Fast </span>
             </div>
             <div className="back-face">
               <span>Run your business Fast</span>

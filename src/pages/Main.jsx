@@ -129,7 +129,7 @@ const Main = () => {
         <Nav />
         <p className="txt-1">Invoice Generator</p>
         <p style={{ fontStyle: "italic" }}>
-          make your business easy and faster
+          Make your business easy and faster
         </p>
       </div>
       <div className="bar-2">
